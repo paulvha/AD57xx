@@ -1,0 +1,48 @@
+#######################################
+# DAC AD5752 AD5732 AD5722
+#######################################
+
+#######################################
+# Class (KEYWORD3)
+#######################################
+
+AD5752	KEYWORD3
+AD5732	KEYWORD3
+AD5722	KEYWORD3
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+dac_begin	KEYWORD2
+getVersion	KEYWORD2
+getControl	KEYWORD2
+getDac	KEYWORD2
+getPower	KEYWORD2
+getRange	KEYWORD2
+getStatus	KEYWORD2
+setControl	KEYWORD2
+setDac	KEYWORD2
+setPower	KEYWORD2
+setRange	KEYWORD2
+setOutput	KEYWORD2
+init_spi	KEYWORD2
+write_ad	KEYWORD2
+read_ad	KEYWORD2
+DAC		KEYWORD2
+
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+p5V	LITERAL1
+p10V	LITERAL1
+p108V	LITERAL1
+pn5V	LITERAL1
+pn10V	LITERAL1
+pn108V	LITERAL1
+DAC_A	LITERAL1
+DAC_B	LITERAL1
+DAC_AB	LITERAL1
+
