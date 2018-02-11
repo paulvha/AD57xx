@@ -1,5 +1,5 @@
 /*****************************************************
- * AD57xx demo +5V to -9V  Bi-polar output range mode
+ * AD57xx demo +5V to -5V  Bi-polar output range mode
  *
  * Paul van Haastrecht
  * Original Creation date: February 2018 / version 1.0
@@ -88,7 +88,7 @@ char slave_pin_DAC = 9;
 void setup() {
 
   Serial.begin(9600);
-  serialTrigger(F("Press any key to begin  +5V to -9V  Bi-polar output range mode."));
+  serialTrigger(F("Press any key to begin  +5V to -5V  Bi-polar output range mode."));
 
   /* enable or disable debug information from the library
    *  0 = disable (default.. no need to call)
