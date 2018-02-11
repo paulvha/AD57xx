@@ -1,38 +1,60 @@
-# AD57xx
-Arduino library for DAC AD5752 / AD5732 / AD5722
+Library for handling AD5722 / AD5732 / AD5752 from Analog Devices
+=============================================
+About Analog Devices:
+©2008–2017 Analog Devices, Inc. All rights reserved. Trademarks and
+registered trademarks are the property of their respective owners.
+D06467-0-2/17(F)
 
-The current version is untested and written based on the specifications / data sheet
-Testing will be performed as soon as an AD5722 arrives.. 
+This library and examples demonstrate the usage of the DAC AD57xx.
+On top in sketch is an explanation and hardware pin setup. It has been
+tested with an Arduino Uno and an AD5722.
 
-For pin layout
+##  Examples provided.
 
- * pin usage	action
- *  1	AVss	  Analog negative voltage Bipolor mode : -4 to -16V, otherwise GND
- *  2   		  Not connected
- *  3	outA	  Analog voltage out of DAC_A channel
- *  4			    Not connected
- *  5   BIN 	Connect to VCC unless you got a clue (see remark 1)
- *  6			    Not connected
- *  7	sync	  connect to the slave_pin_DAC (defined in DEFINITION section below)
- *  8   clock	serial clock : connect to clk (UNO : pin 13)
- *  9   sdin	data in : connect to Mosi     (UNO : pin 11)
- * 10   LDAC	connect to ground or pin      (see remark 2)
- * 11   CLR		connect Vcc (pin 14)          (Is software controlled with OP_CLEAR)
- * 12 			  Not connected
- * 
- * 13			    Not Connected
- * 14	VCC		  connect to 2.7V to 5.5V 
- * 15	GND		  connect GND
- * 16	SDO		  serial data out : connect to MISO  (UNO: pin 12)
- * 17	REFIN	  connect to 2 to 3V, typically 2.5V (remark 3)
- * 18	DAC-gnd connect GND
- * 19	DAC-GND connect GND
- * 20	SIG-GND connect GND
- * 21	SIG-GND connect GND
- * 22			    Not Connected
- * 23	outB	  Analog voltage out of DAC_B channel
- * 24	AVdd	  Analog positive voltage: +4V to +16V
- 
- More information to follow
- 
- Paul
+    AD57_manual_5V
+        Allows to set the DAC values between 0 and 5V
+
+    AD_man_5V_load_cntrl
+        Allows to set the DAC values between 0 and 5V and delay the
+        loading into the DAC registers to start the output based on
+        using a seperate PIN and/or software.
+
+    AD57_loop_bipolar:
+        will provide a continues loop between +5V and -5V.
+
+    AD57_man_bin_2comp_bipolar
+        Allows to set the DAC in either Binary or Two complement
+        output, demonstrate the 2 modes for CLEAR command pre-set and
+        set a DAC value manually to a value between -5V and +5V.
+
+    AD57_man_bipolar
+        Allows to set the DAC value between -5V and +5V in binary
+        mode and demonstrate how to set different values and power down
+        the DAC.
+
+##  calls and subroutines
+
+Available in the extras folder is AD57 library commands.odt. This
+contains an overview of all the library calls, constants and remarks.
+
+##  documentation
+
+The datasheet AD5722/5732/5752 is available in the extras folder.
+At the top of AD57.h, the AD57 library overview and in the different
+sketches there are additional remarks with respect to LDAC,
+BIN/2sComp, RFIN and library usage.
+
+## License Information
+
+This product is _**open source**_!
+
+This code is released under the MIT license
+
+Please use, reuse, and modify these files as you see fit. Please
+maintain attribution to this library and release anything derivative
+under the same license.
+
+Distributed as-is; no warranty is given.
+
+Paul van Haastrecht
+Fabruary 2018
